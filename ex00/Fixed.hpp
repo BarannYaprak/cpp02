@@ -6,7 +6,7 @@
 /*   By: byaprak <byaprak@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 02:18:47 by byaprak           #+#    #+#             */
-/*   Updated: 2026/11/11 02:52:49 by byaprak          ###   ########.fr       */
+/*   Updated: 2026/11/11 17:06:44 by byaprak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class	Fixed
 	public:
 		Fixed();
 		Fixed(const Fixed& other);
-		Fixed& operator=(const Fixed& rhs);
 		~Fixed();
+		Fixed& operator=(const Fixed& rhs);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 };
