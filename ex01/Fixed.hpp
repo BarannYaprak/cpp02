@@ -6,7 +6,7 @@
 /*   By: byaprak <byaprak@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 02:18:47 by byaprak           #+#    #+#             */
-/*   Updated: 2026/11/11 17:41:33 by byaprak          ###   ########.fr       */
+/*   Updated: 2026/11/11 21:34:11 by byaprak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class	Fixed
 {
 	private:
-		int	rawbits;
+		int	_rawBits;
 		static const int bits = 8;
 	public:
 		Fixed();

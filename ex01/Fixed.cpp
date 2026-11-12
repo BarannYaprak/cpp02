@@ -6,7 +6,7 @@
 /*   By: byaprak <byaprak@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 02:27:00 by byaprak           #+#    #+#             */
-/*   Updated: 2026/11/11 18:31:57 by byaprak          ###   ########.fr       */
+/*   Updated: 2026/11/12 00:33:08 by byaprak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
-	rawbits = 0;
+	_rawBits = 0;
 }
 
 Fixed::Fixed(const int value)
 {
 	std::cout << "Int constructor called" << std::endl;
-	rawbits = value << 8;
+	_rawBits = value << 8;
 }
 Fixed::Fixed(const float value)
 {
 	std::cout << "Float constructor called" << std::endl;
-	rawbits = roundf(value * (1 << 8));
+	_rawBits = roundf(value * (1 << 8));
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -37,9 +37,9 @@ Fixed::Fixed(const Fixed& other)
 
 Fixed&	Fixed::operator=(const Fixed& rhs)
 {
-	std::cout << "Copy assigment operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &rhs)
-		this->rawbits = rhs.rawbits;
+		this->_rawBits = rhs._rawBits;
 	return (*this);
 }
 
@@ -57,21 +57,21 @@ Fixed::~Fixed()
 int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (rawbits);
+	return (_rawBits);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
-	rawbits = raw;
+	_rawBits = raw;
 }
 
 float	Fixed::toFloat(void) const
 {
-	return (static_cast<float>(rawbits) / (1 << bits));
+	return (static_cast<float>(_rawBits) / (1 << bits));
 }
 
 int		Fixed::toInt(void) const
 {
-		return (rawbits >> bits);
+		return (_rawBits >> bits);
 }
