@@ -6,12 +6,12 @@
 /*   By: byaprak <byaprak@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 02:18:47 by byaprak           #+#    #+#             */
-/*   Updated: 2026/11/12 00:07:09 by byaprak          ###   ########.fr       */
+/*   Updated: 2026/11/13 15:56:46 by byaprak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYCLASS_HPP
-#define MYCLASS_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 #include<iostream>
 #include<cmath>
 class	Fixed
